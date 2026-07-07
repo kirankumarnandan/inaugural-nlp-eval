@@ -1,4 +1,3 @@
-# inaugural-nlp-eval
 # Inaugural Speech NLP Analysis & Evaluation Framework
 
 Comparative NLP analysis of all 58 US presidential inaugural speeches (1789–2021), covering TF-IDF, topic modeling, sentiment, and rhetorical style.
@@ -15,3 +14,11 @@ Started as a TF-IDF learning project on 3 speeches. Expanded to the full corpus,
 - [ ] v3: Evaluation framework — human-labeled ground truth + LLM-as-judge comparing v1 vs. v2 methods
 
 ## Structure
+```
+notebooks/   → analysis notebooks
+eval/        → evaluation plan, ground truth, method comparisons
+src/         → reusable pipeline code
+```
+
+## Why this project
+Built as part of a career transition toward AI/LLM evaluation engineering — the eval framework layer is the core focus, not just the NLP analysis itself.
