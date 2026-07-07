@@ -1,9 +1,10 @@
 # Evaluation Plan
 
 ## What v1 got wrong (hypotheses to test, not yet proven)
-- TF-IDF top-terms: may surface noise words, not distinctive ones
-- Themes: keyword dictionary is author-biased, not data-driven
-- Sentiment: TextBlob gives one score per speech — no granularity
+- Similarity heatmap unreadable at 58x58 — need embeddings + subset comparison to make similarity findings legible
+- max_features=700/500 in TfidfVectorizer is an arbitrary cap carried over from the 3-speech version, not min_df/max_df based — likely dropping meaningful terms
+- Charts indexed by president name, not year — duplicate labels for multi-term presidents (FDR, Washington), no visible time trend
+- Keyword theme dictionary may misfire on era-specific words (e.g. "danger"/"crisis" scoring generically high for old speeches unrelated to modern crises like COVID) — needs spot-checking against BERTopic output later
 
 ## What "better" will be measured against
 1. Similarity: 20 hand-picked speech pairs, human 1-5 similarity rating
